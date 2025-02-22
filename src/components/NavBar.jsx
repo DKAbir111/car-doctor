@@ -38,7 +38,7 @@ export default function NavBar() {
                             }
                         </ul>
                     </div>
-                    <Link href={'/'}><Image src={logo} alt="Logo image" /></Link>
+                    <Link href={'/'}><Image src={logo} alt="Logo image" className="w-16 md:w-full" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
