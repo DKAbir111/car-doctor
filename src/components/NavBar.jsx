@@ -1,13 +1,15 @@
 import Image from "next/image"
 import logo from '@/assets/logo.svg'
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { CiSearch } from "react-icons/ci";
 export default function NavBar() {
     const links = <>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Services</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contact</a></li>
+        <li><Link href={'/'}>Home</Link> </li>
+        <li><Link href={'/about'}>About</Link></li>
+        <li><Link href={'/service'}>Services</Link></li>
+        <li><Link href={'/blog'}>Blog</Link></li>
+        <li><Link href={'/contact'}>Contact</Link></li>
     </>
     return (
         <nav>
@@ -36,7 +38,7 @@ export default function NavBar() {
                             }
                         </ul>
                     </div>
-                    <Image src={logo} alt="Logo image" />
+                    <Link href={'/'}><Image src={logo} alt="Logo image" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -46,7 +48,9 @@ export default function NavBar() {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-4">
+                    <span className="text-xl">< HiOutlineShoppingBag /></span>
+                    <span className="text-xl"><  CiSearch /></span>
                     <button className="btn btn-outline btn-error">Appoinment</button>
                 </div>
             </div>
